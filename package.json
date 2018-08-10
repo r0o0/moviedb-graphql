@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/r0o0/moviedb-graphql.git",
   "author": "r0o0",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "graphql-yoga": "^1.15.1"
+  }
 }
