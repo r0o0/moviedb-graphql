@@ -1,6 +1,8 @@
+import { getNowPlaying } from './db';
+
 const resolvers = {
   Query: {
-    test: () => 'Hello GraphQL'
+    nowplaying: (_, { lang }, { page }) => getNowPlaying(lang, page)
   }
 };
 
