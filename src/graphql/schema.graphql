@@ -1,6 +1,12 @@
 type Query {
+  configs: Configs!
   nowplaying(page: Int!, lang: String!): [Movies]!
 }
+
+type Configs {
+  secure_base_url: String!
+  poster_sizes: [String!]!
+} 
 
 type Movies {
   id: Int!,
