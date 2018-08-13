@@ -1,12 +1,19 @@
 type Query {
   configs: Configs!
-  nowplaying(page: Int!, lang: String!): [Movies]!
+  nowplaying(page: Int!, lang:String!): Results!
 }
 
 type Configs {
   secure_base_url: String!
   poster_sizes: [String!]!
-} 
+}
+
+type Results {
+  page: Int!,
+  total_results: Int!,
+  total_pages: Int!,
+  movies: [Movies]!
+}
 
 type Movies {
   id: Int!,
@@ -16,3 +23,8 @@ type Movies {
   vote_average: Int!,
   overview: String!
 }
+
+# mutations
+type Mutation {
+  poster(secure_base_url: String, poster_path: String): String
+} 

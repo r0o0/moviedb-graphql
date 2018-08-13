@@ -11,8 +11,11 @@ export const getConfigs = () =>
     .then(res => res.json())
     .then(configs => configs.images);
 
-export const getNowPlaying = (lang, page) =>
-  fetch(`${api_url}&page=${page}&language=${lang}`)
+export const getNowPlaying = (page, lang) => {
+  const region = lang.substr(3, 4);
+  return fetch(`${api_url}&page=${page}&language=${lang}&region=${region}`)
     .then(res => res.json())
-    .then(data => data.results);
+    .then(data => data);
+}
+
 
