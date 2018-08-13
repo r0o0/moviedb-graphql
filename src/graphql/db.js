@@ -18,4 +18,4 @@ export const getNowPlaying = (page, lang) => {
     .then(data => data);
 }
 
-
+export const getMovies = parent => parent.results;

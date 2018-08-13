@@ -1,4 +1,4 @@
-import { getConfigs, getNowPlaying } from './db';
+import { getConfigs, getNowPlaying, getMovies } from './db';
 
 const resolvers = {
   Query: {
@@ -6,7 +6,7 @@ const resolvers = {
     nowplaying: (_, { page, lang }) => getNowPlaying(page, lang)
   },
   Results: {
-    movies: (root) => root.results
+    movies: parent => getMovies(parent)
   }
 };
 

@@ -25,6 +25,6 @@ type Movies {
 }
 
 # mutations
-type Mutation {
-  poster(secure_base_url: String, poster_path: String): String
-} 
+# type Mutation {
+
+# }
