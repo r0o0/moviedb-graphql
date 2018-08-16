@@ -27,6 +27,6 @@ type Movies {
   poster_large: String,
   poster_medium: String,
   poster_small: String,
-  vote_average: Int!,
+  vote_average: Float!,
   overview: String!
 }
