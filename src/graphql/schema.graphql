@@ -5,11 +5,13 @@ type Query {
 type Configs {
   secure_base_url: String!,
   poster_sizes: [String!]!,
-  nowplaying(page: Int!, lang:String!): Results!
+  nowplaying(page: Int!, lang: String!): Results!,
+  movieSearch(keyword: String!, lang: String!): Results!
 }
 
 type Results {
   type: String!,
+  keyword: String!,
   page: Int!,
   total: Int!,
   total_pages: Int!,
