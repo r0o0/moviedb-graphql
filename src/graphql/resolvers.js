@@ -1,4 +1,4 @@
-import { getConfigs, getNowPlaying, getSearchResult, getMovies } from './db';
+import { getConfigs, getNowPlaying, getSearchResult, getMovies, updateMovie } from './db';
 
 const resolvers = {
   Query: {
@@ -10,6 +10,16 @@ const resolvers = {
   },
   Results: {
     movies: parent => getMovies(parent)
+  },
+  Mutation: {
+    post: (_, _, context, info) => {
+      return context.db.mutation.createLink({
+        data: {
+          url: args.url,
+          description: args.description,
+        },
+      }, movieSearch)
+    },
   }
 };
 
