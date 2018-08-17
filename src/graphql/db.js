@@ -74,7 +74,7 @@ const getSearchResult = (parent, keyword, lang) => {
   const size_medium = sizes[sizes.length - 3];
   const size_small = sizes[sizes.length - 4];
 
-  return fetch(`${search_url}&query=${keyword}&language=${lang}`)
+  return fetch(`${search_url}&query=${encodeURI(keyword)}&language=${lang}`)
     .then(res => res.json())
     .then(data => {
       const results = {
