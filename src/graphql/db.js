@@ -93,8 +93,13 @@ const getSearchResult = (parent, keyword, lang) => {
       }
       return results;
     });
-}
+};
 
+const updateMovie = (id, overview) => {
+  return {
+    id,
+    overview
+  }
+};
 
-
-export { getConfigs, getNowPlaying, getMovies, getSearchResult };
+export { getConfigs, getNowPlaying, getMovies, getSearchResult, updateMovie };
