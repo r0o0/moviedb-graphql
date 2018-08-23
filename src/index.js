@@ -3,13 +3,13 @@ import { Prisma } from 'prisma-binding';
 import resolvers from './graphql/resolvers';
 
 const server = new GraphQLServer({
-  typeDefs: "./src/graphql/schema.graphql",
+  typeDefs: "src/graphql/schema.graphql",
   resolvers,
   context: req => ({ 
     ...req,
     db: new Prisma({
       typeDefs: 'src/generated/prisma.graphql',
-      endpoints: 'http://localhost:4466',
+      endpoint: 'http://localhost:4466',
       debug: true
     })
   })
