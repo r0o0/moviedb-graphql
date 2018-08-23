@@ -33,7 +33,3 @@ type Movie {
   overview: String!
 }
 
-type Mutation {
-  updateMovie(id: Int!, overview: String!): Movie!,
-}
-

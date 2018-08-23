@@ -1,4 +1,11 @@
-type User {
-  id: ID! @unique
-  name: String!
+type Movie {
+  id: ID! @unique,
+  title: String!,
+  original_title: String!,
+  poster_hd: String,
+  poster_large: String,
+  poster_medium: String,
+  poster_small: String,
+  vote_average: Float!,
+  overview: String!
 }
