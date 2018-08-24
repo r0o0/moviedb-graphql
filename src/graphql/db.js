@@ -77,6 +77,7 @@ const getSearchResult = (parent, keyword, lang) => {
   return fetch(`${search_url}&query=${encodeURI(keyword)}&language=${lang}`)
     .then(res => res.json())
     .then(data => {
+      console.log(data);
       const results = {
         type: "search",
         keyword: keyword,
