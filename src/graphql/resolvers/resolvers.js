@@ -1,4 +1,5 @@
-import { getConfigs, getNowPlaying, getSearchResult, getMovies, updateMovie } from './db';
+import { getConfigs, getNowPlaying, getSearchResult} from './db';
+import { getMovies } from './utils';
 
 const resolvers = {
   Query: {
