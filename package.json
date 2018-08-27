@@ -7,16 +7,18 @@
   "author": "r0o0",
   "license": "MIT",
   "dependencies": {
-    "graphql-yoga": "^1.15.1",
-    "nodemon": "^1.18.3"
+    "graphql-yoga": "^1.15.1"
   },
   "scripts": {
     "start": "nodemon --exec babel-node src/index.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "dotenv": "^6.0.0",
-    "node-fetch": "^2.2.0"
+    "node-fetch": "^2.2.0",
+    "nodemon": "^1.18.3",
+    "npm-run-all": "^4.1.3"
   }
 }

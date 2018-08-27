@@ -18,10 +18,10 @@ type Results {
   image_url: String!,
   image_original: String!,
   image_large: String!,
-  movies: [Movies]!,
+  movies: [Movie]!,
 }
 
-type Movies {
+type Movie {
   id: Int!,
   title: String!,
   original_title: String!,
